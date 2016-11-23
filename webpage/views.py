@@ -64,7 +64,7 @@ def contact(request):
             email = EmailMessage(subject,
                                  content,
                                  contact_email,
-                                 to=[os.environ.get(DEFAULT_TO_EMAIL), ],
+                                 to=[os.environ.get('DEFAULT_TO_EMAIL'), ],
                                  reply_to=[contact_email,])
 
             email.send()

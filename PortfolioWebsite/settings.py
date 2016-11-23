@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
-from PortfolioWebsite import secret_settings
 import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -24,7 +23,7 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = secret_settings.SECRET_KEY
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -92,14 +91,9 @@ WSGI_APPLICATION = 'PortfolioWebsite.wsgi.application'
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'portfolio',
-        'USER': 'postgres',
-        'PASSWORD': secret_settings.DB_PASSWORD,
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
 }
 DATABASES['default'].update(db_from_env)
 
@@ -150,9 +144,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = secret_settings.EMAIL_HOST_USER
-EMAIL_HOST_PASSWORD = secret_settings.EMAIL_HOST_PASSWORD
-DEFAULT_TO_EMAIL = secret_settings.DEFAULT_TO_EMAIL
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+DEFAULT_TO_EMAIL = config('DEFAULT_TO_EMAIL')
 
 # Blog Settings
 ZINNIA_MARKUP_LANGUAGE = 'markdown'

@@ -4,6 +4,7 @@ body{
     background: url('../../img/contactbackground.png');
     text-align: left;
     font-size: 14px;
+    overflow-x: hidden;
 }
 
 .jumbotron{

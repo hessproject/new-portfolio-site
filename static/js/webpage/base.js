@@ -1,5 +1,6 @@
 $(window).on('load', function(){
     $('.preloader').hide();
+    main();
 });
 
 $('#exampleModal').on('show.bs.modal', function(event){

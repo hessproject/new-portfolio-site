@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.core.mail import EmailMessage
 from webpage.forms import ContactForm
-from PortfolioWebsite import secret_settings
 
 # Create your views here.
 
@@ -64,7 +63,7 @@ def contact(request):
             email = EmailMessage(subject,
                                  content,
                                  contact_email,
-                                 to=[secret_settings.DEFAULT_TO_EMAIL, ],
+                                 to=[os.environ.get(DEFAULT_TO_EMAIL), ],
                                  reply_to=[contact_email,])
 
             email.send()

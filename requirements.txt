@@ -21,4 +21,4 @@ regex==2016.10.22
 six==1.10.0
 static3==0.7.0
 whitenoise==3.2.2
-./venv/lib/site-packages
+zinnia-theme-bootstrap==0.5.1

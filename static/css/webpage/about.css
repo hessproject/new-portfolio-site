@@ -1,0 +1,13 @@
+body{
+    background: url('../../img/aboutbackground.png');
+}
+
+p{
+    font-family: Roboto, sans-serif;
+    font-size: 17px;
+    color:white;
+}
+
+.mainContainer{
+    -webkit-transform: translate3d(0,0,0);
+}

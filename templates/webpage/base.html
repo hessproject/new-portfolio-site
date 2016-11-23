@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <Title>
+            Nick Hess -
+            {% block title_block %}
+            {% endblock %}
+        </Title>
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+        <link href="{% static 'css/webpage/base.css' %}" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        {% block style_block %}
+        {% endblock %}
+    </head>
+
+    <div class="container-fluid main">
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="navbar-main" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{% url 'index' %}">Nick Hess</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-main">
+                    <ul class="nav navbar-nav">
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'skills' %}">Skills</a></li>
+                        <li><a href="{% url 'examples' %}">Project Examples</a></li>
+                        <li><a href="{% url 'blog' %}">Blog</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <div class="content container-fluid">
+
+            <div class="preloader"></div>
+
+            <div class="jumbotron" id="jumbotron">
+                {% block jumbotron_block %}
+                {% endblock %}
+                <hr>
+            </div>
+
+            <div id="mainContainer">
+            {% block body_block %}
+            {% endblock %}
+            </div>
+        </div>
+
+    </div>
+
+    <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/webpage/base.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/easing/EasePack.min.js"></script>
+    <script src="{% static 'js/TweenMax.min.js' %}"></script>
+    <script src="{% static 'js/SplitText.min.js' %}"></script>
+    {% block script_block %}
+    {% endblock %}
+    </body>
+
+</html>
+

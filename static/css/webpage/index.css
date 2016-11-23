@@ -1,0 +1,13 @@
+body{
+    background-image: url("../../img/homebackground.jpg");
+    background-size: cover;
+}
+
+.main{
+    overflow: hidden;
+}
+
+.content{
+    margin-top: 15%;
+    font-size: 22px;
+}

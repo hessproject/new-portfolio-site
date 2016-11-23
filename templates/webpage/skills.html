@@ -1,0 +1,112 @@
+{% extends 'webpage/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+Skills
+{% endblock %}
+
+{% block style_block %}
+    <link href="{% static 'css/webpage/skills.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block jumbotron_block %}
+<h1>Skills</h1>
+{% endblock %}
+
+{% block body_block %}
+<div id="skills" class="row skills">
+    <div class="innerDiv">
+
+        <div class="col-xs-6 col-sm-4 col-md-3">
+            <h3 class="skillHeader" align="center">HTML 5</h3>
+            <div class="skill">
+                <img class="img-responsive smallImg" src="{% static 'img/icons/html5.png' %}">
+            </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-4 col-md-3">
+            <h3 class="skillHeader" align="center">CSS 3</h3>
+            <div class="skill">
+                <img class="img-responsive smallImg" src="{% static 'img/icons/css3.png' %}">
+            </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-4 col-md-3">
+            <h3 class="skillHeader" align="center">Javascript</h3>
+            <div class="skill">
+                <img class="img-responsive smallImg" src="{% static 'img/icons/js.png' %}">
+            </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-4 col-md-3">
+            <h3 class="skillHeader" align="center">Python</h3>
+            <div class="skill">
+                <img class="img-responsive smallImg" src="{% static 'img/icons/python.png' %}">
+            </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-4 col-md-3">
+            <h3 class="skillHeader" align="center">Bootstrap</h3>
+            <div class="skill">
+                <img class="img-responsive smallImg" src="{% static 'img/icons/bootstrap.png' %}">
+            </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-4 col-md-3">
+            <h3 class="skillHeader" align="center">Angular.js</h3>
+            <div class="skill">
+                <img class="img-responsive smallImg" src="{% static 'img/icons/angular.png' %}">
+            </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-4 col-md-3">
+            <h3 class="skillHeader" align="center">JQuery</h3>
+            <div class="skill">
+                <img class="img-responsive smallImg" src="{% static 'img/icons/jquery.png' %}">
+            </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-4 col-md-3">
+            <h3 class="skillHeader" align="center">Django</h3>
+            <div class="skill">
+                <img class="img-responsive smallImg" src="{% static 'img/icons/django.png' %}">
+            </div>
+        </div>
+
+
+        <div class="col-xs-6 col-sm-4 col-md-3">
+            <h3 class="skillHeader" align="center">Java</h3>
+            <div class="skill">
+                <img class="img-responsive smallImg" src="{% static 'img/icons/java.png' %}">
+            </div>
+        </div>
+
+
+        <div class="col-xs-6 col-sm-4 col-md-3">
+            <h3 class="skillHeader" align="center">SQL</h3>
+            <div class="skill">
+                <img class="img-responsive smallImg" src="{% static 'img/icons/database.png' %}">
+            </div>
+        </div>
+
+        <div class="col-xs-6 col-sm-4 col-md-3">
+            <h3 class="skillHeader" align="center">MongoDB</h3>
+            <div class="skill">
+                <img class="img-responsive smallImg" src="{% static 'img/icons/mongodb.png' %}">
+            </div>
+        </div>
+
+
+        <div class="col-xs-6 col-sm-4 col-md-3">
+            <h3 class="skillHeader" align="center">Git</h3>
+            <div class="skill">
+                <img class="img-responsive smallImg" src="{% static 'img/icons/git.png' %}">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block script_block %}
+<script src="{% static 'js/webpage/skills.js' %}"></script>
+{% endblock %}

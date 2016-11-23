@@ -1,0 +1,83 @@
+{% extends 'webpage/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    Contact
+{% endblock %}
+
+{% block style_block %}
+<link href="{% static 'css/webpage/contact.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block jumbotron_block %}
+    <h1 id="header">Contact</h1>
+{% endblock %}
+
+{% block body_block %}
+
+{% if message %}
+<h3>{{ message }}</h3>
+{% endif %}
+
+<div class="row">
+    {% if form %}
+    <div class="col-md-3 col-md-offset-2" id="contactForm">
+        <h3>Email Form</h3>
+        <form class="contactForm" role="form" action="" method="post">
+            {% csrf_token %}
+            <div class="fieldWrapper" id="form_name">
+                {{ form.contact_name.errors }}<br>
+                <label for="{{ form.contact_name.id_for_label }}">Your Name:</label><br>
+                {{ form.contact_name }}
+            </div><br>
+            <div class="fieldWrapper" id="form_email">
+                {{ form.contact_email.errors }}<br>
+                <label for="{{ form.contact_email.id_for_label }}">Your Email:</label><br>
+                {{ form.contact_email }}
+            </div><br>
+            <div class="fieldWrapper" id="form_email">
+                {{ form.subject.errors }}<br>
+                <label for="{{ form.subject.id_for_label }}">Subject:</label><br>
+                {{ form.subject }}
+            </div><br>
+            <div class="fieldWrapper" id="form_content">
+                {{ form.content.errors }}<br>
+                <label for="{{ form.content.id_for_label }}">Message:</label><br>
+                {{ form.content }}
+            </div><br>
+            <div class="submitContainer">
+                <button class="btn" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-3 col-md-offset-2" id="contactButtons">
+        <h3>Social Links</h3>
+        <div class="contactButtonContainer">
+
+            <a href="http://linkedin.com/in/hessproject" target="_blank">
+                <div class="btn contactButton col-xs-12">
+                    <span class="fa fa-linkedin-square"></span> LinkedIn
+                </div>
+            </a>
+
+            <a href="http://github.com/hessproject" target="_blank">
+                <div class="btn contactButton col-xs-12">
+<span class="fa fa-github"></span> Github
+                </div>
+            </a>
+
+            <a href="http://twitter.com/hessprojectcode" target="_blank">
+                <div class="btn contactButton col-xs-12">
+                    <span class="fa fa-twitter"></span> Twitter
+                </div>
+            </a>
+
+        </div>
+    </div>
+</div>
+    {% endif %}
+{% endblock %}
+
+{% block script_block %}
+<script src="{% static 'js/webpage/contact.js' %}"></script>
+{% endblock %}

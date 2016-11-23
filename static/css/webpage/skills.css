@@ -1,0 +1,23 @@
+body{
+    background: url("../../img/skillsbackground.jpg")no-repeat;
+	background-size: cover;
+	color: white;
+}
+
+.jumbotron{
+    padding-bottom: 30px;
+    margin-bottom: 0px;
+}
+
+.img-responsive{
+	margin: 0 auto;
+}
+
+.smallImg{
+	width: 100px;
+	height: 100px;
+}
+
+#skills{
+    margin-bottom: 20px;
+}

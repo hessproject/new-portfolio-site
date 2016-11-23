@@ -1,0 +1,25 @@
+body{
+    overflow-x: hidden;
+    background: url('../../img/examplesbackground.png');
+}
+
+h5{
+    color: black;
+    text-shadow: none;
+}
+
+.jumbotron{
+    margin-top: -15px;
+    margin-bottom: -35px;
+}
+
+.videoThumbnail{
+    height: 150px;
+    width: 250px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.example{
+    text-align: center;
+}

@@ -1,0 +1,4 @@
+venv/
+*.sqlite3
+*.key
+secret_settings.py

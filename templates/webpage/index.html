@@ -1,0 +1,21 @@
+{% extends 'webpage/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+    Portfolio Site
+{% endblock %}
+
+{% block style_block %}
+    <link href="{% static 'css/webpage/index.css' %}" rel="stylesheet">
+{% endblock %}
+
+
+
+{% block jumbotron_block %}
+    <h1 id="header">Nick Hess</h1>
+    <h3 id="subheader">Professional Full Stack Developer</h3>
+{% endblock %}
+
+{% block script_block %}
+<script src="{% static 'js/webpage/index.js' %}"></script>
+{% endblock %}

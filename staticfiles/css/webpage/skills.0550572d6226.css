@@ -1,0 +1,14 @@
+body{
+    background: url("../../img/skillsbackgroundtest.6f752789e499.jpg")no-repeat;
+	background-size: cover;
+	color: white;
+}
+
+.img-responsive{
+	margin: 0 auto;
+}
+
+.smallImg{
+	width: 100px;
+	height: 100px;
+}

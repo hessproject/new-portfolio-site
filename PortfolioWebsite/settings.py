@@ -13,10 +13,6 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 import os
 import dj_database_url
 
-
-ADMINS = [('Nick', os.environ.get('DEFAULT_TO_EMAIL')),]
-SERVER_EMAIL = os.environ.get('DEFAULT_TO_EMAIL')
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
@@ -30,7 +26,7 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -151,6 +147,9 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 DEFAULT_TO_EMAIL = os.environ.get('DEFAULT_TO_EMAIL')
+ADMINS = [('Nick', os.environ.get('DEFAULT_TO_EMAIL')),]
+SERVER_EMAIL = os.environ.get('DEFAULT_TO_EMAIL')
+DEAFULT_FROM_EMAIL = os.environ.get('DEFAULT_TO_EMAIL')
 
 # Blog Settings
 ZINNIA_MARKUP_LANGUAGE = 'markdown'

@@ -13,10 +13,6 @@ hr{
 	width: 50%;
 }
 
-.navbar{
-    opacity: 0.8;
-}
-
 .navbar li:focus, .navbar a:focus {
     outline: none;
 }
@@ -46,4 +42,16 @@ hr{
     height: 100%;
     width: 100%;
     padding-top: 20px;
+}
+
+@media (min-device-width: 1024px){
+    .navbar{
+        opacity: 0.8;
+    }
+}
+
+@media (max-device-width: 1024px){
+    .navbar{
+        opacity: 1;
+    }
 }

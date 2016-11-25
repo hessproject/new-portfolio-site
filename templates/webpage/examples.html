@@ -10,51 +10,34 @@
 {% endblock %}
 
 {% block jumbotron_block %}
-    <h1>Professional Work Samples</h1>
+    <h1>Professional Project Examples</h1>
 {% endblock %}
 
 {% block body_block %}
-
 <div class="example col-xs-12 col-sm-6">
     <h4>Dos Equis Video Wall - Rolling Stone</h4>
-    <a href="#" data-toggle="modal" data-target="#exampleModal" data-title="Dos Equis Video Wall - Rolling Stone" data-video="/static/video/DosEquisWall.mp4"><img class="videoThumbnail" src="{% static 'img/examples/DosEquis.png'%}"></a>
+    <img class="videoThumbnail" src="{% static 'img/examples/DosEquis.png'%}">
 </div>
 <div class="example col-xs-12 col-sm-6">
     <h4>Hands of Stone Theater Unit - Mens Fitness</h4>
-    <a href="#" data-toggle="modal" data-target="#exampleModal" data-title="Hands of Stone Theater Unit - Mens Fitness" data-video="/static/video/HandsOfStoneTheater.mp4"><img class="videoThumbnail" src="{% static 'img/examples/HandsOfStone.png' %}"></a>
+    <img class="videoThumbnail" src="{% static 'img/examples/HandsOfStone.png' %}">
 </div>
 <div class="example col-xs-12 col-sm-6">
     <h4>Sports Video Wall - Newsday</h4>
-    <a href="#" data-toggle="modal" data-target="#exampleModal" data-title="Sports Video Wall - Newsday" data-video="/static/video/NewsdaySports.mp4"><img class="videoThumbnail" src="{% static 'img/examples/NewsdaySports.png'%}"></a>
+   <img class="videoThumbnail" src="{% static 'img/examples/NewsdaySports.png'%}">
 </div>
 <div class="example col-xs-12 col-sm-6">
     <h4>Piping Rock Photo Carousel - Life and Style</h4>
-    <a href="#" data-toggle="modal" data-target="#exampleModal" data-title="Piping Rock Photo Carousel - Life and Style" data-video="/static/video/PhotoCarousel.mp4"><img class="videoThumbnail" src="{% static 'img/examples/PhotoCarousel.png'%}"></a>
+    <img class="videoThumbnail" src="{% static 'img/examples/PhotoCarousel.png'%}">
 </div>
 <div class="example col-xs-12 col-sm-6">
     <h4>Toyota Gatefold - Bossip</h4>
-    <a href="#" data-toggle="modal" data-target="#exampleModal" data-title="Toyota Gatefold - Bossip" data-video="/static/video/ToyotaGatefold.mp4"><img class="videoThumbnail" src="{% static 'img/examples/ToyotaGatefold.png'%}"></a>
+    <img class="videoThumbnail" src="{% static 'img/examples/ToyotaGatefold.png'%}">
 </div>
 <div class="example col-xs-12 col-sm-6">
     <h4>Jaguar Cineflex - The Atlantic</h4>
-    <a href="#" data-toggle="modal" data-target="#exampleModal" data-title="Jaguar Cineflex - The Atlantic" data-video="/static/video/JaguarCineflex.mp4"><img class="videoThumbnail" src="{% static 'img/examples/JaguarCineflex.png'%}"></a>
+    <img class="videoThumbnail" src="{% static 'img/examples/JaguarCineflex.png'%}">
 </div>
-
-<div class="modal fade" id="exampleModal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h5 class="modal-title">Modal title</h5>
-      </div>
-      <div class="modal-body">
-        <video class="modal-video" id="exampleVideo" width="100%" controls></video>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
 {% endblock %}
 
 {% block script_block %}

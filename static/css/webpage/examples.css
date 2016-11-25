@@ -14,9 +14,16 @@ h5{
 }
 
 .exampleThumbnail{
+    margin-left: auto;
+    margin-right: auto;
     height: 150px;
     width: 250px;
     margin-bottom: 10px;
+}
+
+.exampleThumbnail > img {
+    height: 100%;
+    width: 100%;
 }
 
 .example{

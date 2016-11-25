@@ -14,8 +14,8 @@ import os
 import dj_database_url
 
 
-ADMINS = [('Nick', 'hessproject@gmail.com'),]
-SERVER_EMAIL = 'hessproject@gmail.com'
+ADMINS = [('Nick', os.environ.get('DEFAULT_TO_EMAIL')),]
+SERVER_EMAIL = os.environ.get('DEFAULT_TO_EMAIL')
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

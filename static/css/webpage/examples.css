@@ -13,11 +13,17 @@ h5{
     margin-bottom: -35px;
 }
 
-.videoThumbnail{
+.thumbnail{
     height: 150px;
     width: 250px;
     border: 1px solid black;
     margin-bottom: 10px;
+}
+
+.thumbnail > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .example{

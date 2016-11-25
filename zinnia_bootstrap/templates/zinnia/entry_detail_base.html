@@ -1,3 +1,4 @@
+{% extends "zinnia:zinnia/entry_detail_base.html" %}
 {% load comments i18n zinnia %}
 <article id="entry-{{ object.pk }}" class="hentry{% if object.featured %} featured{% endif %}">
   {% block entry-header %}

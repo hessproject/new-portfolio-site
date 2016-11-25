@@ -1,4 +1,6 @@
 body{
+    height: 100%;
+    width: 100%;
     overflow-x: hidden;
     background: url('../../img/examplesbackground.png');
 }
@@ -14,6 +16,7 @@ h5{
 }
 
 .exampleThumbnail{
+    display: inline-block;
     margin-left: auto;
     margin-right: auto;
     height: 150px;

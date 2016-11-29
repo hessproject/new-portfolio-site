@@ -1,10 +1,11 @@
 var splitText = new SplitText('.paragraph',{type:'words'});
-var paragraphs = document.getElementById('mainContainer');
-var jumbotron = document.getElementById('jumbotron');
-var numWords = splitText.words.length;
-var tl = new TimelineMax({delay:0.5});
 
 function main(){
+    var paragraphs = document.getElementById('mainContainer');
+    var jumbotron = document.getElementById('jumbotron');
+    var numWords = splitText.words.length;
+    var tl = new TimelineMax({delay:0.5});
+
     TweenMax.set(paragraphs, {transformPerspective:600, perspective:300, transformStyle:"preserve-3d", autoAlpha:1});
 
 

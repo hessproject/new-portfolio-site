@@ -152,4 +152,4 @@ SERVER_EMAIL = os.environ.get('DEFAULT_TO_EMAIL')
 DEAFULT_FROM_EMAIL = os.environ.get('DEFAULT_TO_EMAIL')
 
 # Blog Settings
-ZINNIA_MARKUP_LANGUAGE = 'markdown'
+ZINNIA_MARKUP_LANGUAGE = 'html'
